@@ -1,0 +1,40 @@
+body{
+    margin: 0%;
+    height: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    box-shadow:  black 5px 5px 20px;
+}
+
+.game{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 100px;
+}
+
+.dashboard{
+
+border-radius: 20px;
+margin-top: 20px;
+background-color: rgba(248, 0, 0, 0.533);
+width: 200px;
+height: 200px;
+box-shadow: rgba(243, 236, 236, 0.533) 10px 10px 10px;
+}
+
+.dashboard > h5{
+    text-align: center;
+    
+}
+.posicoes{
+    margin-left: 30px;
+}
+
+.title{
+    margin-bottom: 20px;
+}
