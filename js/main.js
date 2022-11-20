@@ -2,15 +2,20 @@
 walls.positionsRandom();
 
 
-function gameloop(){
-    clearScreen();
+
+function game(){
     block.changePostion()
     block.wallColision();
-    dashboard();
     block.draw();
     walls.draw();
     exit.draw();
     exit.checkColision();
+}
+
+function gameloop(){
+    clearScreen();
+    dashboard();
+    game();
     setTimeout(gameloop, 1000/speed);
 }
 

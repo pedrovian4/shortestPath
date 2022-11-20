@@ -32,7 +32,6 @@ function clearScreen()
 function keyDown(event){
     //Apertou para cima
     if(event.keyCode ==38){
-        console.log('Cima');
         turnTrue('up');
         yVelocity = -1;
         xVelocity = 0;
@@ -40,7 +39,6 @@ function keyDown(event){
     }
     // apertou para baixo
     if(event.keyCode == 40){
-        console.log('Baixo');
         turnTrue('down');
         yVelocity = 1;
         xVelocity = 0;
@@ -50,7 +48,6 @@ function keyDown(event){
 
     // Apertou para a direita
     if(event.keyCode==39){
-        console.log('Direita');
         turnTrue('right');
         yVelocity=0; 
         xVelocity=1;
@@ -58,7 +55,6 @@ function keyDown(event){
     }
     // Apertou para a esquerda
     if(event.keyCode==37){
-        console.log('esquerda');
         turnTrue('left');
         yVelocity=0; 
         xVelocity= -1;
