@@ -38,3 +38,25 @@ box-shadow: rgba(243, 236, 236, 0.533) 10px 10px 10px;
 .title{
     margin-bottom: 20px;
 }
+
+#findPathBtn {
+    background-color: #cd8660;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    height: 50px;
+    width: 100px;
+    box-shadow: 3px 0 0 0 #b9b9b9;
+}
+
+#findPathBtn:hover {
+    background-color: #45a049;
+}
