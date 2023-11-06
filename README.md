@@ -54,6 +54,3 @@ This is where the magic happens!
 - **`bfs()`:** Breadth-First Search algorithm to find the shortest path from the block to the exit.
 - **`findPath()`:** Uses `bfs()` to determine the path, and moves the block along that path. Also highlights the path.
 
-## Conclusion
-
-In essence, this project is a fun way to explore pathfinding algorithms. The block navigates through the maze, avoiding walls, and you can visually see the shortest path it takes to find the exit. Cool, isn't it? 🎮🚀
