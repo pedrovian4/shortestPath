@@ -2,7 +2,15 @@
 const block={
     headX:10, 
     headY:10, 
-    color:"red", 
+    color:"red",
+    path: [], 
+    drawPath() {
+        ctx.fillStyle = 'lightblue'; 
+        this.path.forEach(p => {
+            let [x, y] = p.split('-').map(Number);
+            ctx.fillRect(x * tileCount, y * tileCount, tileSize, tileSize);
+        });
+    },
     draw(){
         ctx.fillStyle = this.color;
         ctx.fillRect(this.headX * tileCount, this.headY*tileCount,tileSize, tileSize );

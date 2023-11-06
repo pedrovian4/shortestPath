@@ -9,6 +9,7 @@ document.getElementById("findPathBtn").addEventListener("click", async function(
     let start = `${block.headX}-${block.headY}`;
     let end = `${exit.xExit}-${exit.yExit}`;
     let shortestPath = bfs(graph, start, end);
+    block.path = shortestPath;
 
     for (let i = 1; i < shortestPath.length; i++) {
         let [prevX, prevY] = shortestPath[i - 1].split('-').map(Number);
@@ -19,6 +20,7 @@ document.getElementById("findPathBtn").addEventListener("click", async function(
 
         await new Promise(resolve => setTimeout(resolve, 1000 / speed));
     }
+    block.path = [];
     xVelocity = 0;
     yVelocity = 0;
     isFindingPath = false;
@@ -28,6 +30,7 @@ walls.positionsRandom();
 
 
 function game(){
+    block.drawPath();
     block.changePostion()
     block.wallColision();
     block.draw();
