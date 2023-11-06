@@ -19,7 +19,8 @@ document.getElementById("findPathBtn").addEventListener("click", async function(
 
         await new Promise(resolve => setTimeout(resolve, 1000 / speed));
     }
-
+    xVelocity = 0;
+    yVelocity = 0;
     isFindingPath = false;
 });
 
