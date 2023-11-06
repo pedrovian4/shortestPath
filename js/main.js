@@ -1,30 +1,7 @@
 
 let isFindingPath = false;
 
-document.getElementById("findPathBtn").addEventListener("click", async function() {
-    if (isFindingPath) return;
-    
-    isFindingPath = true;
-    let graph = createGraph();
-    let start = `${block.headX}-${block.headY}`;
-    let end = `${exit.xExit}-${exit.yExit}`;
-    let shortestPath = bfs(graph, start, end);
-    block.path = shortestPath;
-
-    for (let i = 1; i < shortestPath.length; i++) {
-        let [prevX, prevY] = shortestPath[i - 1].split('-').map(Number);
-        let [curX, curY] = shortestPath[i].split('-').map(Number);
-        
-        xVelocity = curX - prevX;
-        yVelocity = curY - prevY;
-
-        await new Promise(resolve => setTimeout(resolve, 1000 / speed));
-    }
-    block.path = [];
-    xVelocity = 0;
-    yVelocity = 0;
-    isFindingPath = false;
-});
+document.getElementById("findPathBtn").addEventListener("click", findPath);
 
 walls.positionsRandom();
 
